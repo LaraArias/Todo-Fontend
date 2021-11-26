@@ -129,7 +129,7 @@ class App extends Component {
 
   render() {
     return (
-        <main className="container">
+        <main className="container bg-dark">
           <h1 className="text-white text-uppercase text-center my-4">Productivity app</h1>
           <div className="row">
             <div className="col-md-6 col-sm-10 mx-auto p-0">
