@@ -24,7 +24,7 @@ class App extends Component {
 
   refreshList = () => {
     axios
-        .get("/api/todos/")
+        .get("https://app-productividad-backend.herokuapp.com/")
         .then((res) => this.setState({ todoList: res.data }))
         .catch((err) => console.log(err));
   };
@@ -38,12 +38,12 @@ class App extends Component {
 
     if (item.id) {
       axios
-          .put(`/api/todos/${item.id}/`, item)
+          .put(`https://app-productividad-backend.herokuapp.com/${item.id}/`, item)
           .then((res) => this.refreshList());
       return;
     }
     axios
-        .post("/api/todos/", item)
+        .post("https://app-productividad-backend.herokuapp.com/", item)
         .then((res) => this.refreshList());
   };
 
