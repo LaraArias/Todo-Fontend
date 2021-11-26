@@ -38,12 +38,12 @@ class App extends Component {
 
     if (item.id) {
       axios
-          .put(`https://app-productividad-backend.herokuapp.com/${item.id}/`, item)
+          .put(`/api/todos/${item.id}/`, item)
           .then((res) => this.refreshList());
       return;
     }
     axios
-        .post("https://app-productividad-backend.herokuapp.com/", item)
+        .post("/api/todos/", item)
         .then((res) => this.refreshList());
   };
 
