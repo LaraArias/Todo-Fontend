@@ -38,18 +38,18 @@ class App extends Component {
 
     if (item.id) {
       axios
-          .put(`/api/todos/${item.id}/`, item)
+          .put(`https://djangobackapp.herokuapp.com/api/todos/${item.id}/`, item)
           .then((res) => this.refreshList());
       return;
     }
     axios
-        .post("/api/todos/", item)
+        .post("https://djangobackapp.herokuapp.com/api/todos/", item)
         .then((res) => this.refreshList());
   };
 
   handleDelete = (item) => {
     axios
-        .delete(`/api/todos/${item.id}/`)
+        .delete(`https://djangobackapp.herokuapp.com/api/todos/${item.id}/`)
         .then((res) => this.refreshList());
   };
 
