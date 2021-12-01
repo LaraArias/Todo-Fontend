@@ -53,6 +53,5 @@ morado{
 }
 
 body{
-  background-color: #b8b8bd;
-  background: linear-gradient(135deg, #6811cd55 25%, transparent 25%) -14px 0/ 28px 28px, linear-gradient(225deg, #6811cd 25%, transparent 25%) -14px 0/ 28px 28px, linear-gradient(315deg, #6811cd55 25%, transparent 25%) 0px 0/ 28px 28px, linear-gradient(45deg, #6811cd 25%, #b8b8bd 25%) 0px 0/ 28px 28px;
+  background-color: grey;
 }
