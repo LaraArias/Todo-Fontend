@@ -76,15 +76,15 @@ class App extends Component {
         <div className="nav nav-tabs">
         <span
             onClick={() => this.displayCompleted(true)}
-            className={this.state.viewCompleted ? "nav-link active" : "nav-link"}
+            className={this.state.viewCompleted ? "nav-link active bg-light" : "nav-link"}
         >
-          Complete
+          Hecho
         </span>
           <span
               onClick={() => this.displayCompleted(false)}
-              className={this.state.viewCompleted ? "nav-link" : "nav-link active"}
+              className={this.state.viewCompleted ? "nav-link" : "nav-link active bg-light"}
           >
-          Incomplete
+          Por hacer
         </span>
         </div>
     );
@@ -114,13 +114,13 @@ class App extends Component {
               className="btn btn-secondary mr-2"
               onClick={() => this.editItem(item)}
           >
-            Edit
+            Editar
           </button>
           <button
               className="btn btn-danger"
               onClick={() => this.handleDelete(item)}
           >
-            Delete
+            Eliminar
           </button>
         </span>
         </li>
@@ -129,8 +129,8 @@ class App extends Component {
 
   render() {
     return (
-        <main className="container bg-dark">
-          <h1 className="text-white text-uppercase text-center my-4">Productivity app</h1>
+        <main className="morado">
+          <h1 className="text-white text-uppercase text-center my-4 bg-dark"> Checkify</h1>
           <div className="row">
             <div className="col-md-6 col-sm-10 mx-auto p-0">
               <div className="card p-3">
@@ -139,7 +139,7 @@ class App extends Component {
                       className="btn btn-primary"
                       onClick={this.createItem}
                   >
-                    Add task
+                    Agregar tarea
                   </button>
                 </div>
                 {this.renderTabList()}
@@ -157,6 +157,7 @@ class App extends Component {
               />
           ) : null}
         </main>
+
     );
   }
 }

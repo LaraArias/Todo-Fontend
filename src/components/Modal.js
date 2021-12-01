@@ -36,29 +36,29 @@ export default class CustomModal extends Component {
 
         return (
             <Modal isOpen={true} toggle={toggle}>
-                <ModalHeader toggle={toggle}>Todo Item</ModalHeader>
+                <ModalHeader toggle={toggle}>Tarea por hacer</ModalHeader>
                 <ModalBody>
                     <Form>
                         <FormGroup>
-                            <Label for="todo-title">Title</Label>
+                            <Label for="todo-title">Título</Label>
                             <Input
                                 type="text"
                                 id="todo-title"
                                 name="title"
                                 value={this.state.activeItem.title}
                                 onChange={this.handleChange}
-                                placeholder="Enter Todo Title"
+                                placeholder="Escriba un título"
                             />
                         </FormGroup>
                         <FormGroup>
-                            <Label for="todo-description">Description</Label>
+                            <Label for="todo-description">Descripción</Label>
                             <Input
                                 type="text"
                                 id="todo-description"
                                 name="description"
                                 value={this.state.activeItem.description}
                                 onChange={this.handleChange}
-                                placeholder="Enter Todo description"
+                                placeholder="Escriba una descripción"
                             />
                         </FormGroup>
                         <FormGroup check>
@@ -69,7 +69,7 @@ export default class CustomModal extends Component {
                                     checked={this.state.activeItem.completed}
                                     onChange={this.handleChange}
                                 />
-                                Completed
+                                Completado
                             </Label>
                         </FormGroup>
                     </Form>
@@ -79,7 +79,7 @@ export default class CustomModal extends Component {
                         color="success"
                         onClick={() => onSave(this.state.activeItem)}
                     >
-                        Save
+                        Guardar
                     </Button>
                 </ModalFooter>
             </Modal>
