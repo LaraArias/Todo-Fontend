@@ -72,6 +72,17 @@ export default class CustomModal extends Component {
                                 Completado
                             </Label>
                         </FormGroup>
+                        <FormGroup>
+                            <Label for="todo-description">Fecha</Label>
+                            <Input
+                                type="date"
+                                id="todo-date_due"
+                                name="date_due"
+                                value={this.state.activeItem.description}
+                                onChange={this.handleChange}
+                                placeholder="Escriba una fecha límite"
+                            />
+                        </FormGroup>
                     </Form>
                 </ModalBody>
                 <ModalFooter>
